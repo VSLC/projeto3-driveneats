@@ -9,6 +9,9 @@ let sobremesaPreco;
 function selecionaPrato(e) {
   prato = e.querySelector(".nomePrato").innerHTML;
   pratoPreco = e.querySelector(".preco").innerHTML;
+  pratoPreco = tratarValor(pratoPreco);
+  console.log(typeof pratoPreco);
+  console.log(pratoPreco);
 
   let pratoSelecionado = document.querySelector(".prato-scroll .selecionado");
   console.log(pratoSelecionado);
@@ -24,6 +27,7 @@ function selecionaPrato(e) {
 function selecionaBebida(e) {
   bebida = e.querySelector(".nomeBebida").innerHTML;
   bebidaPreco = e.querySelector(".preco").innerHTML;
+  bebidaPreco = tratarValor(bebidaPreco);
   console.log(bebida);
   console.log(bebidaPreco);
 
@@ -38,6 +42,7 @@ function selecionaBebida(e) {
 function selecionaSobremesa(e) {
   sobremesaPreco = e.querySelector(".preco").innerHTML;
   sobremesa = e.querySelector(".nomeSobremesa").innerHTML;
+  sobremesaPreco = tratarValor(sobremesaPreco);
   console.log(sobremesa);
   console.log(sobremesaPreco);
 
@@ -57,5 +62,11 @@ function verificaSelecionado() {
     botaoPedido.classList.add("habilitado");
     botaoPedido.innerHTML = "fechar pedido";
   }
+}
+
+function tratarValor(valor) {
+  valor = valor.replace("R$ ", "").replace(",", ".");
+  valor = Number(valor);
+  return valor;
 }
 
