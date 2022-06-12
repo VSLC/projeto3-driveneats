@@ -2,26 +2,60 @@ let prato;
 let bebida;
 let sobremesa;
 
-let precoPrato;
-let precoBebida;
-let precoSobremesa;
+let pratoPreco;
+let bebidaPreco;
+let sobremesaPreco;
 
 function selecionaPrato(e) {
-  precoPrato = document.querySelector(".preco").innerHTML;
-  precoPrato = trataPreco(precoPrato);
-  prato = document.querySelector(".nomePrato").innerHTML;
-  console.log(prato);
+  prato = e.querySelector(".nomePrato").innerHTML;
+  pratoPreco = e.querySelector(".preco").innerHTML;
 
-  let pratoSelecionado = document.querySelector(".selecionado");
+  let pratoSelecionado = document.querySelector(".prato-scroll .selecionado");
   console.log(pratoSelecionado);
   if (pratoSelecionado !== null) {
-    pratoSelecionado.classList.toggle("selecionado");
+    pratoSelecionado.classList.remove("selecionado");
   }
-  e.classList.toggle("selecionado");
+  console.log(prato);
+  console.log(pratoPreco);
+  e.classList.add("selecionado");
+  verificaSelecionado();
 }
 
-function trataPreco(v) {
-  v = v.replace("R$ ", "").replace(",", ".");
-  v = Number(v);
-  return v;
+function selecionaBebida(e) {
+  bebida = e.querySelector(".nomeBebida").innerHTML;
+  bebidaPreco = e.querySelector(".preco").innerHTML;
+  console.log(bebida);
+  console.log(bebidaPreco);
+
+  let bebidaSelecionada = document.querySelector(".bebida-scroll .selecionado");
+  if (bebidaSelecionada !== null) {
+    bebidaSelecionada.classList.remove("selecionado");
+  }
+  e.classList.add("selecionado");
+  verificaSelecionado();
 }
+
+function selecionaSobremesa(e) {
+  sobremesaPreco = e.querySelector(".preco").innerHTML;
+  sobremesa = e.querySelector(".nomeSobremesa").innerHTML;
+  console.log(sobremesa);
+  console.log(sobremesaPreco);
+
+  let sobremesaSelecionada = document.querySelector(
+    ".pudim-scroll .selecionado"
+  );
+  if (sobremesaSelecionada !== null) {
+    sobremesaSelecionada.classList.remove("selecionado");
+  }
+  e.classList.add("selecionado");
+  verificaSelecionado();
+}
+
+function verificaSelecionado() {
+  if (prato !== undefined && bebida !== undefined && sobremesa !== undefined) {
+    const botaoPedido = document.querySelector(".botao");
+    botaoPedido.classList.add("habilitado");
+    botaoPedido.innerHTML = "fechar pedido";
+  }
+}
+
