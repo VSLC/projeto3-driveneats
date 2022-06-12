@@ -70,3 +70,13 @@ function tratarValor(valor) {
   return valor;
 }
 
+function somaValor() {
+  let valorTotal = sobremesaPreco + bebidaPreco + pratoPreco;
+  return valorTotal;
+}
+
+function mostrarMensagem(){
+  let mensagem = `
+    
+  `
+}
