@@ -58,7 +58,7 @@ function selecionaSobremesa(e) {
 }
 
 function verificaSelecionado() {
-  if (pratoPreco !== undefined && bebidaPreco !== undefined && sobremesaPreco !== undefined) {
+  if (prato !== undefined && bebida !== undefined && sobremesa !== undefined) {
     const botaoPedido = document.querySelector(".botao");
     botaoPedido.classList.add("habilitado");
     botaoPedido.innerHTML = "fechar pedido";
@@ -77,10 +77,11 @@ function somaValor() {
 }
 
 function mostrarMensagem() {
-  let nome = prompt("Qual seu nome :");
-  let endereco = prompt("Qual seu endereço: ");
+  if (prato !== undefined && bebida !== undefined && sobremesa !== undefined) {
+    let nome = prompt("Qual seu nome :");
+    let endereco = prompt("Qual seu endereço: ");
 
-  let mensagem = `
+    let mensagem = `
     Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
@@ -90,9 +91,10 @@ function mostrarMensagem() {
     Nome: ${nome}
     Endereço: ${endereco}`;
 
-  console.log(mensagem);
-  const linkWhatsapp = `https://wa.me/5531975834488?text=${encodeURIComponent(
-    mensagem
-  )}`;
-  window.open(linkWhatsapp);
+    console.log(mensagem);
+    const linkWhatsapp = `https://wa.me/5531975834488?text=${encodeURIComponent(
+      mensagem
+    )}`;
+    window.open(linkWhatsapp);
+  }
 }
