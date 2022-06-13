@@ -17,91 +17,91 @@
   </div>
 
   <div class="conteudo-principal">
-
     <div class="prato">
       <h1 class="margin-left">Primeiro , seu prato</h1>
       <div class="prato-scroll margin-left">
-        <div class="prato-scroll-item selected">
+        <div class="prato-scroll-item" onclick="selecionaPrato(this);">
           <img class="scroll-image" src="/img/frango-ying-yang.png">
-          <h4>Frango Ying Yang</h4>
+          <h4 class="nomePrato">Frango Ying Yang</h4>
           <p class="descricao">Um pouco de batata, um pouco de salada</p>
           <p class="preco">R$ 15.90</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
-        <div class="prato-scroll-item selected">
+        <div class="prato-scroll-item" onclick="selecionaPrato(this);">
           <img class="scroll-image" src="/img/frango-ying-yang.png">
-          <h4>Frango Ying Yang</h4>
+          <h4 class="nomePrato">Frango Ying</h4>
           <p class="descricao">Um pouco de batata, um pouco de salada</p>
           <p class="preco">R$ 19.90</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
-        <div class="prato-scroll-item selected">
+        <div class="prato-scroll-item" onclick="selecionaPrato(this);">
           <img class="scroll-image" src="/img/frango-ying-yang.png">
-          <h4>Frango Ying Yang</h4>
+          <h4 class="nomePrato">Frango Ying Yang</h4>
           <p class="descricao">Um pouco de batata, um pouco de salada</p>
           <p class="preco">R$ 16</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
       </div>
 
       <h1 class="margin-left">Agora , sua bebida</h1>
       <div class="bebida-scroll margin-left">
-        <div class="bebida-scroll-item selected">
+        <div class="bebida-scroll-item" onclick="selecionaBebida(this);">
           <img class="scroll-image" src="/img/coquinha-gelada.png">
-          <h4>Coquinha gelada</h4>
+          <h4 class="nomeBebida">Coquinha gelada</h4>
           <p class="descricao">Lata 350ml</p>
           <p class="preco">R$ 5.5</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
-        <div class="bebida-scroll-item selected">
+        <div class="bebida-scroll-item" onclick="selecionaBebida(this);">
           <img class="scroll-image" src="/img/coquinha-gelada.png">
-          <h4>Coquinha gelada</h4>
+          <h4 class="nomeBebida">Coquinha gelada</h4>
           <p class="descricao">Lata 350ml</p>
           <p class="preco">R$ 6</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
-        <div class="bebida-scroll-item selected">
+        <div class="bebida-scroll-item" onclick="selecionaBebida(this);">
           <img class="scroll-image" src="/img/coquinha-gelada.png">
-          <h4>Coquinha gelada</h4>
+          <h4 class="nomeBebida">Coquinha gelada</h4>
           <p class="descricao">Lata 350ml</p>
           <p class="preco">R$ 6.50</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle none"></ion-icon>
         </div>
       </div>
 
       <h1 class="margin-left">Por fim , sua sobremesa</h1>
       <div class="pudim-scroll margin-left">
-        <div class="pudim-scroll-item selected">
+        <div class="pudim-scroll-item" onclick="selecionaSobremesa(this);">
           <img class="scroll-image" src="/img/pudim.png">
-          <h4>Pudim</h4>
+          <h4 class="nomeSobremesa">Pudim rosa</h4>
           <p class="descricao">Apenas pudim</p>
           <p class="preco">R$ 7</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class=" check" name="checkmark-circle"></ion-icon>
         </div>
-        <div class="pudim-scroll-item selected">
+        <div class="pudim-scroll-item" onclick="selecionaSobremesa(this);">
           <img class="scroll-image" src="/img/pudim.png">
-          <h4>Pudim</h4>
+          <h4 class="nomeSobremesa">Pudim</h4>
           <p class="descricao">Apenas pudim</p>
           <p class="preco">R$ 6.90</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
-        <div class="pudim-scroll-item selected">
+        <div class="pudim-scroll-item" onclick="selecionaSobremesa(this);">
           <img class="scroll-image" src="/img/pudim.png">
-          <h4>Pudim</h4>
+          <h4 class="nomeSobremesa">Pudim</h4>
           <p class="descricao">Apenas pudim</p>
           <p class="preco">R$ 8</p>
-          <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <button>Selecione os 3 itens <br> para fechar o pedido</button>
+    <button class="botao" onclick="mostrarMensagem();"> Selecione os 3 itens <br> para fechar o pedido </button>
   </div>
+
+  <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
