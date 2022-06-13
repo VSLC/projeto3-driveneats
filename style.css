@@ -151,13 +151,13 @@ body {
     width: 100%;
   }
 
-  .check {
+  .icone {
     opacity: 0;
   }
 
-  .selecionado .check,
-  .selecionado .check,
-  .selecionado .check {
+  .selecionado .icone,
+  .selecionado .icone,
+  .selecionado .icone {
     opacity: 1;
   }
 
